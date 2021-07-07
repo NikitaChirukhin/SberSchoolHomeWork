@@ -19,7 +19,7 @@ func sum (firstTerm: String, secondTerm: String) -> String {
             } else {
                 num1 = "0"
             }
-            if ((Int(num1) ?? 0) + (Int(num2) ?? 0) < 11) {
+            if ((Int(num1) ?? 0) + (Int(num2) ?? 0) + ost < 10) {
                 sum += String(((Int(num1) ?? 0) + (Int(num2) ?? 0) + ost) % 10)
                 ost = 0
             } else {
