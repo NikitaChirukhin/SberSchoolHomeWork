@@ -1,4 +1,11 @@
 
 module LibOne {
     umbrella header "../LibOne/UmbrellaHeader.h"
+    
+    export *
+    
+    explicit module LibObjC {
+        umbrella header "../LibObjC/UmbrellaHeader.h"
+    }
 }
+

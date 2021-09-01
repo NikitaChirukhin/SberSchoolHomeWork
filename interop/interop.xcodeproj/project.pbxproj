@@ -17,6 +17,9 @@
 		8A58C35926DF9BEF00630327 /* LibOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A58C35826DF9BEF00630327 /* LibOne.m */; };
 		8A58C35A26DF9BEF00630327 /* LibOne.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A58C35726DF9BEF00630327 /* LibOne.h */; };
 		8A58C35F26DF9C9700630327 /* libLibOne.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A58C35526DF9BEF00630327 /* libLibOne.a */; };
+		8A58C36C26DFB19400630327 /* LibObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A58C36B26DFB19400630327 /* LibObjC.m */; };
+		8A58C36D26DFB19400630327 /* LibObjC.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A58C36A26DFB19400630327 /* LibObjC.h */; };
+		8A58C37126DFB1AC00630327 /* libLibObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A58C36826DFB19400630327 /* libLibObjC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8A58C35426DF9BEF00630327;
 			remoteInfo = LibOne;
+		};
+		8A58C37226DFB1AC00630327 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A58C32B26DF96F500630327 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A58C36726DFB19400630327;
+			remoteInfo = LibObjC;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,6 +47,16 @@
 			dstSubfolderSpec = 16;
 			files = (
 				8A58C35A26DF9BEF00630327 /* LibOne.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A58C36626DFB19400630327 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				8A58C36D26DFB19400630327 /* LibObjC.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +79,10 @@
 		8A58C35826DF9BEF00630327 /* LibOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibOne.m; sourceTree = "<group>"; };
 		8A58C36226DF9DC900630327 /* UmbrellaHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UmbrellaHeader.h; sourceTree = "<group>"; };
 		8A58C36326DF9E3B00630327 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		8A58C36826DFB19400630327 /* libLibObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLibObjC.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A58C36A26DFB19400630327 /* LibObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibObjC.h; sourceTree = "<group>"; };
+		8A58C36B26DFB19400630327 /* LibObjC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibObjC.m; sourceTree = "<group>"; };
+		8A58C37426DFB20100630327 /* UmbrellaHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UmbrellaHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +91,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A58C35F26DF9C9700630327 /* libLibOne.a in Frameworks */,
+				8A58C37126DFB1AC00630327 /* libLibObjC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8A58C35226DF9BEF00630327 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A58C36526DFB19400630327 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,6 +117,7 @@
 			children = (
 				8A58C33526DF96F500630327 /* interop */,
 				8A58C35626DF9BEF00630327 /* LibOne */,
+				8A58C36926DFB19400630327 /* LibObjC */,
 				8A58C33426DF96F500630327 /* Products */,
 				8A58C35E26DF9C9700630327 /* Frameworks */,
 			);
@@ -95,6 +128,7 @@
 			children = (
 				8A58C33326DF96F500630327 /* interop.app */,
 				8A58C35526DF9BEF00630327 /* libLibOne.a */,
+				8A58C36826DFB19400630327 /* libLibObjC.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,8 +154,8 @@
 		8A58C35626DF9BEF00630327 /* LibOne */ = {
 			isa = PBXGroup;
 			children = (
-				8A58C35726DF9BEF00630327 /* LibOne.h */,
 				8A58C36226DF9DC900630327 /* UmbrellaHeader.h */,
+				8A58C35726DF9BEF00630327 /* LibOne.h */,
 				8A58C35826DF9BEF00630327 /* LibOne.m */,
 			);
 			path = LibOne;
@@ -132,6 +166,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A58C36926DFB19400630327 /* LibObjC */ = {
+			isa = PBXGroup;
+			children = (
+				8A58C37426DFB20100630327 /* UmbrellaHeader.h */,
+				8A58C36A26DFB19400630327 /* LibObjC.h */,
+				8A58C36B26DFB19400630327 /* LibObjC.m */,
+			);
+			path = LibObjC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +193,7 @@
 			);
 			dependencies = (
 				8A58C36126DF9C9700630327 /* PBXTargetDependency */,
+				8A58C37326DFB1AC00630327 /* PBXTargetDependency */,
 			);
 			name = interop;
 			productName = interop;
@@ -172,6 +217,23 @@
 			productReference = 8A58C35526DF9BEF00630327 /* libLibOne.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		8A58C36726DFB19400630327 /* LibObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A58C36E26DFB19400630327 /* Build configuration list for PBXNativeTarget "LibObjC" */;
+			buildPhases = (
+				8A58C36426DFB19400630327 /* Sources */,
+				8A58C36526DFB19400630327 /* Frameworks */,
+				8A58C36626DFB19400630327 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibObjC;
+			productName = LibObjC;
+			productReference = 8A58C36826DFB19400630327 /* libLibObjC.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,6 +248,9 @@
 						LastSwiftMigration = 1250;
 					};
 					8A58C35426DF9BEF00630327 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					8A58C36726DFB19400630327 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -205,6 +270,7 @@
 			targets = (
 				8A58C33226DF96F500630327 /* interop */,
 				8A58C35426DF9BEF00630327 /* LibOne */,
+				8A58C36726DFB19400630327 /* LibObjC */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +308,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A58C36426DFB19400630327 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A58C36C26DFB19400630327 /* LibObjC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -249,6 +323,11 @@
 			isa = PBXTargetDependency;
 			target = 8A58C35426DF9BEF00630327 /* LibOne */;
 			targetProxy = 8A58C36026DF9C9700630327 /* PBXContainerItemProxy */;
+		};
+		8A58C37326DFB1AC00630327 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A58C36726DFB19400630327 /* LibObjC */;
+			targetProxy = 8A58C37226DFB1AC00630327 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -455,6 +534,30 @@
 			};
 			name = Release;
 		};
+		8A58C36F26DFB19400630327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9G744H27D6;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A58C37026DFB19400630327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9G744H27D6;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -481,6 +584,15 @@
 			buildConfigurations = (
 				8A58C35C26DF9BEF00630327 /* Debug */,
 				8A58C35D26DF9BEF00630327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A58C36E26DFB19400630327 /* Build configuration list for PBXNativeTarget "LibObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A58C36F26DFB19400630327 /* Debug */,
+				8A58C37026DFB19400630327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

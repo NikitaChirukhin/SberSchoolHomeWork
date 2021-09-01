@@ -6,7 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LibObjC.h"
 
 @interface LibOne : NSObject
+
+@property(strong, nonatomic) LibObjC *lib;
 
 @end
